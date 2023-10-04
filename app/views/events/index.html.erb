@@ -1,3 +1,13 @@
-<h1>Events#index</h1>
+<h1>Lista de Eventos</h1>
+<ul>
+     <% @events.each do |event| %>
+          <li>
+               <strong><%= event.title %></strong><br>
+               Local: <%= event.location %><br>
+               Data: <%= event.date.strftime("%d/%m/%y %H:%M") %>
+          </li>
+     <% end %>
+</ul>
+
 <p>Find me in app/views/events/index.html.erb</p>
 <p><%= link_to "Novo Evento", new_event_path %></p>
